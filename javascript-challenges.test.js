@@ -111,10 +111,6 @@ const hand4 = [7, 2, 7, 2, 7]
 // Pseudo code:
 
 // function to count occurrences of each element in an array
-
-
-
-
 const countHand = (hand) =>
 // Initialize an empty object to store counts
 // Iterate through each element in the array for num in arr
