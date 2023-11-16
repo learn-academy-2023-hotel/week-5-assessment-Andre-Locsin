@@ -19,3 +19,20 @@ end
 #print the total
 p totals
 # Output: => {"fish taco"=>9, "california burrito"=>4, "tacos al pastor"=>3, "carnitas tacos"=>4, "tacos de barbacoa"=>2} 
+
+
+
+#Revese Engineered Prompt
+# My apologies if this is wroing I'm uncertain if this is what was meant by the question
+animes = ['One Piece', 'One Piece: Clockwork Island', 'One Piece', 'One Piece: Stampede', 'One Piece: Gold', 'One Piece: Z', 'One Piece', 'One Piece: Strong World', 'One Piece: Clockwork Island', 'One Piece: Stampede', 'One Piece: Gold', 'One Piece: Z']
+
+totals = animes.reduce(Hash.new(0)) do |result, vote|
+
+  result[vote.downcase] += 1
+
+  result
+
+end
+p totals
+
+#Output: {"one piece"=>3, "one piece: clockwork island"=>2, "one piece: stampede"=>2, "one piece: gold"=>2, "one piece: z"=>2, "one piece: strong world"=>1} 

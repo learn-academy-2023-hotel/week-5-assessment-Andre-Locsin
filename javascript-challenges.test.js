@@ -31,7 +31,7 @@ const secretCodeWord3 = "Eccentric"
 // // create an empty variable to hold our future coded string
 //     let codedMessage = ""
 // // create a loop to iterate over ever letteracter of our string
-//     for (let i = 0; i < string.length; i++) {
+//     for (let i = 0 i < string.length i++) {
 //         //create a lengthy if else statement
 //         if (string[i] === "a") { //set our conditions where if [i] which is the current index of the letter is stricly equal to the given letter
 //         codedMessage += '4'
@@ -45,7 +45,7 @@ const secretCodeWord3 = "Eccentric"
 //             codedMessage += string[i]
 //         }
 //     }
-//     return codedMessage;
+//     return codedMessage
 // }
 
 
@@ -55,7 +55,7 @@ const secretCodeWord3 = "Eccentric"
 //  =============================================================================
 //create a function that takes in a string and replaces certain strings into a string of a number
 const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1)
 }
 //Create a variable to hold the newly formed string
 const newWord = ""
@@ -91,11 +91,11 @@ return string.split('').map(letter => {
     
 
 
-// Pseudo code:
+// // Pseudo code:
 
-// --------------------2) Create a function that takes in an array of 5 numbers and determines whether or not the array is a "full house". A full house is exactly one pair and one three of a kind.
+// // --------------------2) Create a function that takes in an array of 5 numbers and determines whether or not the array is a "full house". A full house is exactly one pair and one three of a kind.
 
-// a) Create a test with expect statements using the variable provided.
+// // a) Create a test with expect statements using the variable provided.
 
 const hand1 = [5, 5, 5, 3, 3]
 // Expected output: true
@@ -106,9 +106,9 @@ const hand3 = [5, 5, 5, 5, 4]
 const hand4 = [7, 2, 7, 2, 7]
 // Expected output: true
 
-// b) Create the function that makes the test pass.
+// // b) Create the function that makes the test pass.
 
-// Pseudo code:
+// // Pseudo code:
 
 // function to count occurrences of each element in an array
 const countHand = (hand) =>
@@ -118,7 +118,7 @@ const countHand = (hand) =>
 // counts[num] = (counts[num] || 0) + 1
 // "counts" is are accumulator "num" is our currentValue
 // Set our initializer to 0
-  hand.reduce((counts, num) => ({ ...counts, [num]: (counts[num] || 0) }),{
+  hand.reduce((counts, num) => ({ ...counts, [num]: (counts[num] || 0) + 1 }),{
 })
 // Function to check if an array represents a full house
 const isFullHouse = (hand) => {
@@ -132,14 +132,35 @@ const isFullHouse = (hand) => {
   return hasPair && hasThreeOfAKind
 }
 
-const result = isFullHouse([5, 5, 5, 3, 3])
+// // const result1 = isFullHouse([5, 5, 5, 3, 3])
 
+// // Jest test
+// describe('isFullHouse', () => {
+//   it('should return a full house hand', () => {
+//     expect(hand1.isFullHouse).toEqual(true)
+//     expect(hand2.isFullHouse).toEqual(false)
+//     expect(hand3.isFullHouse).toEqual(false)
+//     expect(hand4.isFullHouse).toEqual(true)
+//   })
+// })
+
+// Function to count occurrences of each element in an array
+// const countHand = (hand) =>
+//   hand.reduce((counts, num) => ({ ...counts, [num]: (counts[num] || 0) + 1 }), {})
+
+// // Function to check if an array represents a full house
+// const isFullHouse = (hand) => {
+//   const counts = countHand(hand)
+//   const hasPair = Object.values(counts).includes(2)
+//   const hasThreeOfAKind = Object.values(counts).includes(3)
+//   return hasPair && hasThreeOfAKind
+// }
 // Jest test
-describe('isFullHouse function', () => {
-  it('should return true for a full house hand', () => {
-    expect(result).toEqual(true)
-    expect(result).toEqual(false)
-    expect(result).toEqual(false)
-    expect(result).toEqual(true)
+describe('isFullHouse', () => {
+  it('should return a full house', () => {
+    expect(isFullHouse(hand1)).toEqual(true)
+    expect(isFullHouse(hand2)).toEqual(false)
+    expect(isFullHouse(hand3)).toEqual(false)  
+    expect(isFullHouse(hand4)).toEqual(true)
   })
 })

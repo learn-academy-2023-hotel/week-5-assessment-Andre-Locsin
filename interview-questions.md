@@ -16,7 +16,7 @@ Researched answer: Test driven development  or TDD in the development world is w
 
 Your answer: A relational database is a software or program used to create, read, update and destroy the specified database. I am unable to answer if there are other existing databases at this time and will be getting back to you with an answer.
 
-Researched answer: Relational database is a program used to create,update and manage relational databases.Some of the most well known databses include MySQL, PostgreSQL, MariaDB, MicrosoftSQL, and Oracle Databse to name a few.
+Researched answer: A relational database is structured similar to a spreadsheet with its information displayed in rows and columns this database commonly uses Structured Query Language (SQL) for operations like creating, reading, updating, and deleting (CRUD) data. There are different kinds of databses available such us Centralized Database, Operational Database, NoSQL databases to name a few.
 
 3. What is an ORM?
 
